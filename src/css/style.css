@@ -72,8 +72,9 @@ button:hover {
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: auto;
   transition: background-color 0.3s;
+  align-self: flex-start;
+  margin-top: -5px;
 }
 
 .btn-excluir:hover {
@@ -94,6 +95,10 @@ button:hover {
 }
 
 .produto {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   color: black;
   background-color: var(--white-color);
   border: 1px solid #ddd;
@@ -101,9 +106,6 @@ button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 15px 0;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .produto-details {
@@ -118,6 +120,7 @@ button:hover {
 }
 
 .produto-info {
+  flex-grow: 1;
   display: flex;
   align-items: center;
   padding: 5px;
@@ -143,6 +146,9 @@ button:hover {
   button {
     width: 100%;
     margin-bottom: 10px;
+  }
+  .btn-excluir {
+    margin-top: 5px;
   }
 
   .produto {

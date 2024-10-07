@@ -11,19 +11,29 @@
     />
   </head>
   <body>
-    <div id="controls">
-      <button id="startButton"><i class="fa-solid fa-camera"></i></button>
-      <input type="text" id="codigo" placeholder="Código do produto" />
-      <input type="text" id="quantidade" placeholder="Quantidade" />
-      <button id="addButton">
-        <i class="fa-solid fa-plus"></i>
-      </button>
-      <button id="sendButton" class="btn-enviar">Enviar Produtos</button>
-    </div>
+    <nav>
+      <button id="scannerTab">Scanner</button>
+      <button id="ordersTab">Meus Pedidos</button>
+    </nav>
 
-    <div id="produtos"></div>
+    <!-- Scanner Section -->
+    <section id="scannerSection">
+      <div id="controls">
+        <button id="startButton">Abrir Câmera</button>
+        <input type="text" id="codigo" placeholder="Código lido" />
+        <input type="text" id="quantidade" placeholder="Quantidade" />
+        <button id="addButton">Adicionar Produto</button>
+        <button id="sendButton" class="btn-enviar">Enviar Produtos</button>
+      </div>
+      <div id="produtos"></div>
+      <video id="preview"></video>
+    </section>
 
-    <video id="preview"></video>
+    <!-- Meus Pedidos Section -->
+    <section id="ordersSection" style="display: none">
+      <h2>Meus Pedidos</h2>
+      <div id="ordersList"></div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
     <script src="./script/script.js"></script>

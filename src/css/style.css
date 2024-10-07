@@ -1,12 +1,16 @@
 :root {
-  --primary-color-blue: #007bff;
-  --secondary-color-blue: #0056b3;
+  --primary-color-yellow: #fff200;
+  --secondary-color-yellow: #fcf679;
+
   --primary-color-red: #dc3545;
   --secondary-color-red: #c82333;
+
   --primary-color-green: #28a745;
   --secondary-color-green: #218838;
+
   --background-color-body: #333;
-  --backgorund-color: #f0f4f8;
+  --background-color: #f0f4f8;
+
   --white-color: #ffff;
 }
 
@@ -19,30 +23,37 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: var(--backgorund-color);
+  background-color: var(--background-color);
   color: var(--background-color-body);
   padding: 20px;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
-  color: var(--primary-color-blue);
+  color: var(--primary-color-yellow);
   margin-bottom: 20px;
 }
+
+/* Input Fields */
 input {
   color: var(--white-color);
+  background-color: var(--background-color-body);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
+/* Video Preview */
 #preview {
   width: 100%;
   height: auto;
   display: none;
 }
 
+/* Controls (Buttons and Inputs) */
 #controls {
   margin: 20px 0;
   display: flex;
@@ -52,7 +63,7 @@ input {
 }
 
 button {
-  background-color: var(--primary-color-blue);
+  background-color: var(--primary-color-yellow);
   color: var(--white-color);
   border: none;
   padding: 10px 20px;
@@ -62,9 +73,10 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color-blue);
+  background-color: var(--secondary-color-yellow);
 }
 
+/* Excluir Button */
 .btn-excluir {
   background-color: var(--primary-color-red);
   color: var(--white-color);
@@ -80,6 +92,8 @@ button:hover {
 .btn-excluir:hover {
   background-color: var(--secondary-color-red);
 }
+
+/* Enviar Button */
 .btn-enviar {
   background-color: var(--primary-color-green);
   color: var(--white-color);
@@ -94,6 +108,7 @@ button:hover {
   background-color: var(--secondary-color-green);
 }
 
+/* Produto Card */
 .produto {
   display: flex;
   justify-content: space-between;
@@ -108,6 +123,7 @@ button:hover {
   padding: 15px;
 }
 
+/* Produto Details (When Expanded) */
 .produto-details {
   color: black;
   display: none;
@@ -115,20 +131,58 @@ button:hover {
   padding-left: 10px;
   width: 100%;
   background-color: #f9f9f9;
-  border-left: 4px solid var(--primary-color-blue);
+  border-left: 4px solid var(--primary-color-yellow);
   padding: 10px;
 }
 
+/* Produto Info Text */
 .produto-info {
   flex-grow: 1;
   display: flex;
   align-items: center;
   padding: 5px;
   margin-left: 5px;
-  color: var(--primary-color-blue);
+  color: var(--primary-color-yellow);
 }
+
 .unidade {
   padding: 5px 0;
+}
+
+/* Nav Buttons */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+nav button {
+  background-color: var(--primary-color-yellow);
+  color: var(--white-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: var(--secondary-color-yellow);
+}
+
+/* Orders Section */
+#ordersSection {
+  display: none;
+}
+
+.pedido {
+  background-color: var(--white-color);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Media Queries (Mobile Devices) */
@@ -147,6 +201,7 @@ button:hover {
     width: 100%;
     margin-bottom: 10px;
   }
+
   .btn-excluir {
     margin-top: 5px;
   }
